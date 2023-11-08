@@ -26,15 +26,11 @@ def pedir_edad(msj: str) -> int:
     return edad
 
 def años_cumplidos(edad):
-
-    resultado = None
-    
-    print("Años que has cumplido: ")
-    
+    años_cumplidos  = ""
     for i in range (1, edad + 1):
-        resultado = print(i)
-
-    return resultado    
+        años_cumplidos += str(i) + "\n"
+    
+    return años_cumplidos
 
 
 def main():
@@ -42,7 +38,7 @@ def main():
     edad = pedir_edad("Introduzca su edad: ")
 
     if edad != None and edad > 0:
-      años_cumplidos(edad)
+        print(años_cumplidos(edad))
 
 
 if __name__ == "__main__":

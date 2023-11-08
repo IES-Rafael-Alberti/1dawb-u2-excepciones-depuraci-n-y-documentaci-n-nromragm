@@ -2,10 +2,10 @@ def pedir_numero():
     numero = None
 
     try:
-        numero = int(input("Introduze un numero entero positivo: "))
+        numero = int(input("Introduze un numero entero: "))
 
-    except:
-        print("El numero no es correcto")
+    except ValueError as e:
+        print(f"La entrada no es correcta \n{e}")
 
     return numero
 
