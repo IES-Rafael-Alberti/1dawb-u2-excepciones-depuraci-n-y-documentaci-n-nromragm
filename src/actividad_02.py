@@ -16,21 +16,22 @@ def pedir_numero():
 
 
 def numeros_impares(numero):
-    print(f"Numeros impares hasta {numero}:", end=" ")
+    resultado = f"Numeros impares hasta {numero}:\n"
 
     for i in range (1, numero + 1, 2):
         if i != 1:
-            print(", ", end="")
+            resultado += ", "
         
-        print(i, end=".")    
+        resultado += str(i)
     
+    return resultado
 
 def main():
     
     numero = pedir_numero()
 
     if numero != None and numero > 0:
-        numeros_impares(numero)
+        print(numeros_impares(numero))
 
 
 if __name__ == "__main__":
